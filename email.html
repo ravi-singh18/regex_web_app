@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Validation</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #27cb79;
+    }
+    h1 {
+            color: #333;
+        }
+
+    form {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+    }
+    .container {
+        text-align: center;
+    }
+    input[type="text"] {
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    button {
+        width: 120px;
+        height: 40px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    a {
+            display: inline-block;
+            margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form method="POST">
+        <input type="text" name="email" placeholder="Enter your email" required><br>
+        <button type="submit">Validate Email</button><br>
+    </form>
+    {% if message %}
+        <h2>{{ message }}</h2><br>
+    {% endif %}
+        <a href="/">Back to Home</a>
+</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #da6969;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            background-color: #0e4d7d;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #2449cf;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004494;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Regex Pattern Matching</h1>
+    <form method="POST">
+        <input type="text" name="pattern" placeholder="Enter regex pattern" required>
+        <textarea name="text" placeholder="Enter text to search" required></textarea>
+        <button type="submit">Result</button>
+    </form>
+    {% if results %}
+        <h2>Matches Found:</h2>
+        <ul>
+            {% for result in results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if messages %}
+    <h2>{{ messages }}</h2>
+    {% endif %}
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
+
+
